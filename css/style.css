@@ -17,12 +17,16 @@ p {
 
 
 /* header  ====================================================================================*/
+header {
+	background: #fff;
+}
 .topheader {
 	background: #fff;
 	color: #000;
 	display: flex;
 	justify-content: space-around;
-	
+	width: 1200px;
+	margin: auto;
 }
 .mainheader {
 	background: #fff;
@@ -36,22 +40,43 @@ p {
 }
 .bottomheader {
 	width: 1200px;
-	
+	margin: 0 auto;
 }
-.bottomheader > .container{
-	
+.bottomheader .container{
 	display: flex;
 	justify-content: space-around;
-	/*width: 1200px;
-	
-	j*/
+
 }
+
+.dropmenu {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropmenu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropmenu a:hover {background-color: #ddd;}
+
+.bottomheader .container:hover .dropmenu {display: block;}
+
+.bottomheader .container:hover .cake {background-color: #3e8e41;}
+
 
 
 /* main ====================================================================================*/
 main {
 	flex: 1 1 auto;
-
+	width: 1200px;
+	margin: auto;
 	min-height: 100vh;
 	width: 1200px;
 	display: flex;
@@ -73,6 +98,8 @@ footer {
 .mainfooter {
 	display: flex;
 	justify-content: space-around;
+	width: 1200px;
+	margin: auto;
 }
 .leftfooter {
 	padding: 10px;
@@ -80,4 +107,12 @@ footer {
 
 .rightfooter {
 	padding: 10px;
+}
+
+.bottomfooter {
+	width: 1200px;
+	margin: auto;
+	padding: 30px;
+	box-sizing: border-box;
+	opacity: 0.6;
 }
