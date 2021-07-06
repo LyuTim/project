@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Index Page</title>
-		<!-- подключать шрифты сюда -->
+
         <link rel="stylesheet" href="css/style.css">
         <script src="js/jquery-3.6.0.min.js"></script>
         <script src="js/scripts.js"></script>
@@ -11,28 +11,57 @@
 	<body>
 		<div class="wrapper">
             <header>
-                <div class="topheader">
-					<p>Лисица и Корица</p>
-					<p>Доставка</p>
-					<p>Контакты</p>
-					<p>Обо мне</p>
-					<p>Корзина</p>
+                <div class="topheader">					
+					<nav>						
+						<ul>
+							<img src='images/mylogo.png' alt='mylogo' id='privet'>
+							<li><a href='#'>Лисица и Корица</a></li><!--
+							--><li><a href='#'>Доставка</a></li><!--
+							--><li><a href='#'>Контакты</a></li><!--
+							--><li><a href='#'>Обо мне</a></li><!--
+							--><li><a href='#'>Корзина</a></li>
+						</ul>
+					</nav>
                 </div>
                 <div class="mainheader">
                         <img src='images/tort-kit-kat.jpg'>
                 </div>
                 <div class="bottomheader">
-					<div class="container">
-						<button class='cake'>Торты</button>
-						<div class='dropmenu'>
-							<a href="#">Link 1</a>
-							<a href="#">Link 2</a>
-							<a href="#">Link 3</a>
-						</div>
-						<button class='cupcake'>Капкейки</button>
-						<button class='macarons'>Макаронс</button>
-						<button class='chocolate'>Шоколад</button>
-					</div>
+					<nav>
+						<ul>
+							<li><a href='#'>Торты</a>
+								<ul>
+									<li><a href='toppings.html'>Начинки</a></li>
+									<li><a href='#'>К празднику</a>
+										<ul>
+											<li><a href="#">День рождения</a></li>
+											<li><a href="#">Свадьба</a></li>
+											<li><a href="#">Новый год и Рождество</a></li>
+											<li><a href="#">Пасха</a></li>
+											<li><a href="#">День учителя</a></li>
+											<li><a href="#">Выпускной</a></li>
+										</ul>
+									</li>
+									<li><a href='#'>Необычные формы</a></li>
+									<li><a href='#'>Мини-торты</a></li>
+								</ul>
+							</li><!--
+							--><li><a href='#'>Капкейки</a></li><!--
+							--><li><a href='#'>Макаронс</a></li><!--
+							--><li><a href='#'>Шоколад</a></li><!--
+							--><li><a href='#'>Другие вкусности</a>
+								<ul>
+									<li><a href='#'>Зефир</a></li>
+									<li><a href='#'>Безе</a></li>
+									<li><a href='#'>Пряники</a></li>
+									<li><a href='#'>Пирожное-картошка</a></li>
+									<li><a href='#'>Куличи</a></li>
+									<li><a href='#'>Рождественские кексы</a></li>
+									<li><a href='#'>Кофейные стаканчики</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>	
                 </div>
             </header>
 			<main>
@@ -66,3 +95,41 @@
         </div>
 	</body>
 </html>
+
+
+                <!--div class="bottomheader">
+					<div class="buttonContainer">
+						<div class='dropdown'>
+							<button class='cake'>Торты</button>
+							<div class='dropdownContent'>
+								<a href='#'>Link 1</a>
+								<a href='#'>Link 2</a>
+								<a href='#'>Link 3</a>
+							</div>
+						</div>
+						<div class='dropdown'>
+							<button class='cupcake'>Капкейки</button>
+							<div class='dropdownContent'>
+								<a href='#'>Link 1</a>
+								<a href='#'>Link 2</a>
+								<a href='#'>Link 3</a>
+							</div>
+						</div>
+						<div class='dropdown'>
+							<button class='macarons'>Макаронс</button>
+							<div class='dropdownContent'>
+								<a href='#'>Link 1</a>
+								<a href='#'>Link 2</a>
+								<a href='#'>Link 3</a>
+							</div>	
+						</div>
+						<div class='dropdown'>
+							<button class='chocolate'>Шоколад</button>
+							<div class='dropdownContent'>
+								<a href='#'>Link 1</a>
+								<a href='#'>Link 2</a>
+								<a href='#'>Link 3</a>
+							</div>
+						</div>
+					</div>
+                </div-->
