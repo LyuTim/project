@@ -1,0 +1,276 @@
+body {
+	margin: 0;
+	font: normal 16px/20px Arial, sans-serif;
+	background: #fcc;
+}
+p {
+	margin: 0;
+}
+.container {
+
+	
+}
+.wrapper {
+
+}
+
+/* slider styles */
+.slider {
+    position: relative;
+    width: 1200px;
+    height: 240px;
+    overflow: hidden;
+}
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1200px;
+    height: 240px;
+}
+.slide.active {
+    z-index: 1;
+}
+.slide img {
+    width: 1200px;
+    height: 240px;
+}
+.rule {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    z-index: 2;
+}
+.slider:hover .rule {
+    display: block;
+}
+.rule span {
+    position: absolute;
+    top: calc(50% - 17px);
+    cursor: pointer; /* курсор показывает, что тут активный элемент */
+    user-select: none; /* запрещаем выделение текста - кнопка не "синеет", как по ней ни кликай*/
+    font-size: 30px;
+    width: 34px;
+    text-align: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,.5);
+}
+.left {
+    left: 5%;
+}
+.right {
+    right: 5%;
+}
+
+/* header  ====================================================================================*/
+header {
+	background: #fff;
+}
+.topheader {
+	background: #fff;
+	color: #000;
+	display: flex;
+	justify-content: space-around;
+	width: 1200px;
+	margin: auto;
+	align-items: center;
+}
+.topheader div {
+	display: flex;
+	align-items: center;
+}
+.topheader div:hover {
+	cursor: pointer;
+}
+.topheader p:hover {
+	cursor: pointer;
+}
+.topheader img {
+	padding: 0 0 0 10px;
+	width: 30px;
+}
+.mainheader {
+	background: #fff;
+	display: flex;
+	justify-content: center;
+}
+.mainheader > img {
+	background: #fff;
+	padding: 0;
+
+}
+.bottomheader {
+	width: 1200px;
+	margin: 0 auto;
+}
+.bottomheader .container{
+	display: flex;
+	justify-content: space-around;
+
+}
+
+.dropmenu {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropmenu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropmenu a:hover {background-color: #ddd;}
+
+.bottomheader .container:hover .dropmenu {display: block;}
+
+.bottomheader .container:hover .cake {background-color: #3e8e41;}
+
+
+
+/* main ====================================================================================*/
+main {
+	flex: 1 1 auto;
+	width: 1200px;
+	margin: auto;
+	min-height: 100vh;
+	width: 1200px;
+	display: flex;
+	justify-content: center;
+}
+main > .container {
+
+	background: #fff;
+	display: flex;
+	flex-wrap: wrap;
+	width: 1200px;
+	align-content: flex-start;
+}
+
+
+.incontent {
+	margin: 50px;
+	padding: 0;
+}
+.incontent:hover {
+	cursor: pointer;
+
+}
+
+.inimg {
+
+	/*background-image: url(../images/cake.jpg);*/
+	width: 300px;
+	height: 300px;
+	display: inline-block; 
+    overflow: hidden;
+}
+.inimg img {
+
+	/*background-image: url(../images/cake.jpg);*/
+	width: 300px;
+	height: 300px;
+	transition: 1s; 
+    display: block;
+}
+.inimg img:hover {
+	transform: scale(1.2);
+}
+
+
+.intext {
+	margin: 10px 0;
+
+	font-size: xx-large;
+	text-align: center;
+}
+
+.inbottom {
+	padding: 50px;
+	width: 100%;
+	text-align: center;
+
+}
+
+.side {
+	background: #678;
+	width: 300px;
+	height: 100vh;
+	margin: 0 30px 0;
+}
+
+
+/* order -----------------------------------------*/
+.order {
+	width: 100%;
+	background: #fff;
+}
+.nihil {
+	display: none;
+}
+.empty .nihil {
+	display: block;
+}
+.empty .table,
+.empty #orderdata {
+	display: none;
+}
+.rub:after, .sum:after, .allsum:after {
+	content: ' \20bd';
+}
+.num input {
+	border: 0;
+	width: 50px;
+}
+.del {
+	width: 60px;
+}
+.del > div {
+	width: 24px;
+	height: 24px;
+	border-radius: 24px;
+	text-align: center;
+	font: normal 24px/24px Arial;
+	transform: rotate(45deg);
+	transform-origin: center;
+	background: red;
+	color: white;
+	cursor: pointer;
+}
+
+/* footer  ====================================================================================*/
+footer {
+	background: #966;
+	color: #fff;
+}
+
+.mainfooter {
+	display: flex;
+	justify-content: space-around;
+	width: 1200px;
+	margin: auto;
+}
+.leftfooter {
+	padding: 10px;
+}
+
+.rightfooter {
+	padding: 10px;
+}
+
+.bottomfooter {
+	width: 1200px;
+	margin: auto;
+	padding: 30px;
+	box-sizing: border-box;
+	opacity: 0.6;
+}
+

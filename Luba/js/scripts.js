@@ -1,10 +1,10 @@
-/* slider =================================================================================*/
+
 $(function(){
     sliderRun(); // запускаем нашу программу, когда готов DOM
 });
 function sliderRun() {
     const w = $('.slide').width(); // ширина слайда - самая важная константа, ее везде используем
-    const t = 2500; // время в миллисекундах, вынесено в константу для удобства. для таймаута я взял удвоенный интервал.
+    const t = 3000; // время в миллисекундах, вынесено в константу для удобства. для таймаута я взял удвоенный интервал.
     let current = 0; // указатели на текущий слайд и его соседей слева и справа
     let left = -1; // -1 соответствует length-1, то есть последнему слайду из набора
     let right = 1;
@@ -14,7 +14,7 @@ function sliderRun() {
     $('.slide').eq(current).addClass('active').css('left', 0);
     $('.slide').eq(left).css('left', -w); // располагаем левый и правый слайды по бокам от основного. поскольку overflow: hidden - их не видно. используем одно и то же свойство left для всех слайдов.
     $('.slide').eq(right).css('left', w);
-    function moveLeft() {
+    function moveRight() {
         if (flag1 || flag2 || flag3) return; // проверяем флаги, если хоть один не убран, отказываемся действовать. это не позволит одновременно выполняться вызовам от постоянной прокрутки и кнопок или от двух кнопок сразу.
         flag1 = true; // поднимаем все флаги, чтобы не допустить нового вызова, пока не отработал текущий
         flag2 = true;
@@ -35,7 +35,7 @@ function sliderRun() {
         $('.slide').eq(right).css('left', w); // устанавливаем правый слайд в готовности справа. поскольку он не должен быть виден - без анимации.
         flag3 = false; // убираем третий флаг
     }
-    function moveRight() { // все аналогично предыдущей функции, только в обратную сторону
+    function moveLeft() { // все аналогично предыдущей функции, только в обратную сторону
         if (flag1 || flag2 || flag3) return;
         flag1 = true;
         flag2 = true;
@@ -61,8 +61,8 @@ function sliderRun() {
         moveLeft(); // вспомогательная функция вызывает прокрутку влево
         tm = setTimeout(everScroll, t * 2); // и назначает новый вызов себя с задержкой. это не рекурсия, так как функция сразу и заканчивает работу, а не ждет результатов вызова.
     }
-    $('.left').click(moveRight); // на кнопки навещиваем вызов прокрутки влево и вправо соответственно
-    $('.right').click(moveLeft);
+    $('.left').click(moveLeft); // на кнопки навещиваем вызов прокрутки влево и вправо соответственно
+    $('.right').click(moveRight);
     /*
     $('.stop').click(function(){
         clearTimeout(tm);
@@ -75,20 +75,6 @@ function sliderRun() {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* =================================================================================*/
-
 $(function(){
     $('.submenu_mover').click(function(){
         if ($(this).parent().hasClass('open')) {
@@ -100,7 +86,7 @@ $(function(){
                 height: 0
             }, 1000);
             $(this).parent().addClass('open').find('.submenu').animate({
-                height: ($(this).parent().find('.submenu a').length * 24)
+                height: ($(this).parent().find('.submenu a').length * $('.submenu a').height())
             }, 1000);
         }
     });
@@ -130,79 +116,27 @@ $(function(){
         }
     });
     
-    $(document).on('click', 'button[type="submit"]', function(){
-        alert('OGOGO!!!');
-    });
-    
     $(document).on('click', '.order .del > div', function(){
         tovarDelete(this);
     });
     
-    $(document).on('change input', '.order .num > input', function(){
+    $(document).on('input', '.order .num > input', function(){
         tovarChange(this);
     });
-	$('#privet').click(function(){alert('Привет!')});
-});
-
-
-
-/* order */
-const order = [
-    {
-        id: 5711,
-        name: 'Товар 1',
-        value: 10,
-        price: 5
-    },
-    {
-        id: 3432,
-        name: 'Товар 2',
-        value: 10,
-        price: 10
-    },
-    {
-        id: 4846,
-        name: 'Товар 3',
-        value: 10,
-        price: 15
-    }
-]
-function tovarDelete(point) {
-    let b = point.parentNode.parentNode;
-    let t_id = b.querySelector('th').dataset.tovar;
-    for (let i = 0; i < order.length; i++) {
-        if (order[i].id == t_id) {
-            order.splice(i, 1);
-            console.log(t_id); // имитация отправки бэку сообщения об удалении товара
-            break;
-        }
-    }
-    b.remove();
-    if (order.length > 0) {
-        tovarCount();
-    } else {
-        document.querySelector('.table').remove();
-        document.querySelector('.nihil').style = 'display:block';
-    }
-}
-function tovarChange(a) {
-    let b = a.parentNode.parentNode;
-	let newVal = b.querySelector('input').value();
-	let t_id = b.querySelector('th').dataset.tovar;
-    for (let i = 0; i < order.length; i++) {
-        if (order[i].id == t_id) {
-            order[i].value = order[1].value(newVal);
-			console.log(newVal);
-        }
-    }
-	
-	// опознать товар
-    // найти его в ордере
-    // изменить количество в ордере
-    // вызвать пересчет +
     
-    tovarCount();
-}
-function tovarCount() {
-    alert('It works!');
-}
+    $('#date').click(function(){
+        if ($('#date').val()) {
+            selected_day = makeSelectedDate($('#date').val());
+            makePopup(selected_day.getFullYear(),selected_day.getMonth());
+        } else {
+            makePopup(TODAY.getFullYear(),TODAY.getMonth());
+        }
+    });
+    
+    $('#date').mask('00-00-0000');
+    
+    $('#orderdata').on('submit', function(e){// отправка формы
+        e.preventDefault();
+        orderAction();
+    })
+});

@@ -26,8 +26,6 @@ header {
 .topheader {
 	background: #fff;
 	color: #000;
-	display: flex;
-	justify-content: space-around;
 	width: 1200px;
 	margin: 0 auto;
 }
@@ -35,7 +33,6 @@ header {
 .topheader nav ul img {
 	width: 150px;
 	height: 150px;
-
 }
 
 			/* задаем цвет фона для контейнера nav. */
@@ -49,7 +46,7 @@ header {
     padding: 0;
     margin: 0;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
     list-style: none;
     position: relative;
 	align-items: flex-end;
@@ -61,7 +58,6 @@ header {
     display: inline-block;
     background-color: #fff;
 	min-width: 120px;
-
 	text-align: center;
 }
 			
@@ -73,12 +69,15 @@ header {
 	font-size:20px;
 	line-height: 60px;
 	text-decoration:none;
+
 }
 			
 			/* изменяем цвет фона при наведении курсора */
 .topheader nav a:hover {
-	background-color: #ccc;
+	background-color: #966;
+	color: #fff;
 }
+
 
 
 
@@ -93,6 +92,66 @@ header {
 	padding: 0;
 
 }
+
+
+/* slider styles =================================================================== */
+.slider {
+    position: relative;
+    width: 1200px;
+    height: 240px;
+    overflow: hidden;
+}
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1200px;
+    height: 240px;
+}
+.slide.active {
+    z-index: 1;
+}
+.slide img {
+    width: 1200px;
+    height: 240px;
+}
+.rule {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    z-index: 2;
+}
+.slider:hover .rule {
+    display: block;
+}
+.rule span {
+    position: absolute;
+    top: calc(50% - 17px);
+    cursor: pointer; /* курсор показывает, что тут активный элемент */
+    user-select: none; /* запрещаем выделение текста - кнопка не "синеет", как по ней ни кликай*/
+    font-size: 30px;
+    width: 34px;
+    text-align: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,.5);
+}
+.left {
+    left: 5%;
+}
+.right {
+    right: 5%;
+}
+
+
+
+
+
+
+/* bottomheader===================================================================*/
+
 .bottomheader {
 	width: 1200px;
 	margin: 0 auto;
@@ -121,7 +180,16 @@ header {
 	min-width: 100px;
 	text-align: center;
 }
-			
+.bottomheader nav ul li ul li {
+	background-color: #d19a99;
+
+}
+.bottomheader nav ul li ul li a {
+	color: #fff;
+}	
+.bottomheader nav ul li ul li a:hover {
+	background-color: #966;
+}	
 			/* стилизуем ссылки */
 .bottomheader nav a {
 	display:block;
@@ -135,7 +203,8 @@ header {
 			
 			/* изменяем цвет фона при наведении курсора */
 .bottomheader nav a:hover {
-	background-color: #ccc;
+	background-color: #966;
+	color: #fff;
 }
 
 /* скрываем выпадающие списки по умолчанию
@@ -218,8 +287,65 @@ main {
 }
 main > .container {
 	background: #fff;
+	display: flex;
+	flex-wrap: wrap;
 	width: 1200px;
+	align-content: flex-start;
 }
+
+.incontent {
+	margin: 50px;
+	padding: 0;
+}
+.incontent:hover {
+	cursor: pointer;
+
+}
+
+.inimg {
+
+	/*background-image: url(../images/cake.jpg);*/
+	width: 300px;
+	height: 300px;
+	display: inline-block; 
+    overflow: hidden;
+}
+.inimg img {
+
+	/*background-image: url(../images/cake.jpg);*/
+	width: 300px;
+	height: 300px;
+	transition: 1s; 
+    display: block;
+}
+.inimg img:hover {
+	transform: scale(1.2);
+}
+
+
+.intext {
+	margin: 10px 0;
+
+	font-size: xx-large;
+	text-align: center;
+}
+
+.inbottom {
+	padding: 50px;
+	width: 100%;
+	text-align: center;
+
+}
+
+.side {
+	background: #678;
+	width: 300px;
+	height: 100vh;
+	margin: 0 30px 0;
+}
+
+
+
 .pages {
 	display: flex;
 	flex-direction: column;
@@ -248,6 +374,52 @@ main > .container {
 	font-size: medium;
 	background-color: #966;
 }
+
+/* order */
+.order {
+	width: 100%;
+	background: #fff;
+}
+.nihil {
+	display: none;
+}
+.rub:after, .sum:after, .allsum:after {
+	content: ' \20bd';
+}
+.num input {
+	border: 0;
+	width: 50px;
+}
+.del {
+	width: 60px;
+}
+.del > div {
+	width: 24px;
+	height: 24px;
+	border-radius: 24px;
+	text-align: center;
+	font: normal 24px/24px Arial;
+	transform: rotate(45deg);
+	transform-origin: center;
+	background: red;
+	color: white;
+	cursor: pointer;
+}
+
+table {
+	table-layout: fixed;
+	width: 100%;
+	padding: 10px;
+}
+table tbody tr td {
+	align-content: center;
+}
+table tbody tr:nth-child(odd) {
+	background: #966;
+}
+/*table thead tr th {
+	border-bottom: 1px solid black;
+}*/
 
 
 /* footer  ====================================================================================*/

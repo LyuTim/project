@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Index Page</title>
+		<!-- подключать шрифты сюда -->
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/scripts.js"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+            <header>
+                <div class="topheader">
+					<p>Лисица и Корица</p>
+					<p>Контакты и доставка</p>
+					<p>Обо мне</p>
+					<div>
+						<p>Корзина</p>
+						<img src='images/basket.png'>						
+					</div>
+                </div>
+                <div class="mainheader">
+                    		<div class="container">
+            <div class="slider">
+                <div class="slide">
+                    <a href="#">
+                        <img src="1.jpg" alt="1.jpg">
+                    </a>
+                </div>
+                <div class="slide">
+                    <img src="2.jpg" alt="2.jpg">
+                </div>
+                <div class="slide">
+                    <img src="3.jpg" alt="3.jpg">
+                </div>
+                <div class="slide">
+                    <h1>PREVED!!!!!</h1>
+                </div>
+                <div class="slide">
+                    <img src="2.jpg" alt="5.jpg">
+                </div>
+                <div class="slide">
+                    <img src="3.jpg" alt="6.jpg">
+                </div>
+                <div class="rule">
+                    <span class="left"><</span>
+                    <span class="right">></span>
+                </div>
+            </div>
+        </div>
+                </div>
+                <div class="bottomheader">
+					<div class="container">
+						<button class='cake'>Торты</button>
+						<div class='dropmenu'>
+							<a href="#">Link 1</a>
+							<a href="#">Link 2</a>
+							<a href="#">Link 3</a>
+						</div>
+						<button class='cupcake'>Капкейки</button>
+						<button class='macarons'>Макаронс</button>
+						<button class='chocolate'>Шоколад</button>
+					</div>
+                </div>
+            </header>
+            <main class="container catalog">
+                <aside>
+					<div class='side'></div>
+                </aside>
+                <div class="order">
+                    <h1>Корзина</h1>
+                    <p class="nihil">Ваша корзина пуста.</p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Наименование</th>
+                                <th scope="col">Количество</th>
+                                <th scope="col">Цена</th>
+                                <th scope="col">Сумма</th>
+                                <th scope="col">Удалить</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" data-tovar="5711">1</th>
+                                <td>Товар 1</td>
+                                <td class="num">
+                                    <input type="number" value="10" pattern="^[0-9]*$">
+                                </td>
+                                <td class="rub">5</td>
+                                <td class="sum">50</td>
+                                <td class="del">
+                                    <div>+</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" data-tovar="3432">2</th>
+                                <td>Товар 2</td>
+                                <td class="num">
+                                    <input type="number" value="10" pattern="^[0-9]*$">
+                                </td>
+                                <td class="rub">10</td>
+                                <td class="sum">100</td>
+                                <td class="del">
+                                    <div>+</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" data-tovar="4846">3</th>
+                                <td>Товар 3</td>
+                                <td class="num">
+                                    <input type="number" value="10" pattern="^[0-9]*$">
+                                </td>
+                                <td class="rub">15</td>
+                                <td class="sum">150</td>
+                                <td class="del">
+                                    <div>+</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th scope="row">Итого</th>
+                                <td colspan="5" class="allsum">300</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <form id="orderdata">
+                        <input type="text" id="name" placeholder="name"><br>
+                        <input type="text" id="address" placeholder="address"><br>
+                        <input type="text" id="email" placeholder="email"><br>
+                        <input type="text" id="date" placeholder="date"><br>
+                        <textarea id="comment" placeholder="comment"></textarea><br>
+                        <button type="submit">Отправить заказ</button>
+                    </form>
+                </div>
+            </main>
+            <footer>
+                <br>
+                <br>
+                <br>
+                <br>
+            </footer>
+        </div>
+        <div class="popup-desk">
+            <div class="popup">
+                
+            </div>
+        </div>
+	</body>
+</html>
