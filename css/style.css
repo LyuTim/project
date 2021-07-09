@@ -10,8 +10,9 @@ p {
 	margin: 0;
 }
 .container {
-
-	
+	display: flex;
+	justify-content: center;
+	align-content: center;
 }
 .wrapper {
 
@@ -62,7 +63,7 @@ header {
 }
 			
 			/* стилизуем ссылки */
-.topheader nav a {
+.links {
 	display:block;
 	padding:0 10px;
 	color:#000;
@@ -73,11 +74,14 @@ header {
 }
 			
 			/* изменяем цвет фона при наведении курсора */
-.topheader nav a:hover {
+.links:hover {
 	background-color: #966;
 	color: #fff;
 }
-
+.mainpage {
+	padding: 15px 0 0 0;
+	margin: 0;
+}
 
 
 
@@ -325,9 +329,10 @@ main > .container {
 
 .intext {
 	margin: 10px 0;
-
+	max-width: 300px;
 	font-size: xx-large;
 	text-align: center;
+	
 }
 
 .inbottom {
@@ -421,34 +426,13 @@ table tbody tr:nth-child(odd) {
 	border-bottom: 1px solid black;
 }*/
 
-
-/* footer  ====================================================================================*/
-footer {
-	background: #966;
-	color: #fff;
+.maps {
+	
 }
 
-.mainfooter {
-	display: flex;
-	justify-content: space-around;
-	width: 1200px;
-	margin: auto;
-}
-.leftfooter {
-	padding: 10px;
-}
 
-.rightfooter {
-	padding: 10px;
-}
 
-.bottomfooter {
-	width: 1200px;
-	margin: auto;
-	padding: 30px;
-	box-sizing: border-box;
-	opacity: 0.6;
-}
+
 
 
 aside {
@@ -554,4 +538,43 @@ aside {
 	background: red;
 	color: white;
 	cursor: pointer;
+}
+
+
+/* footer  ====================================================================================*/
+footer {
+	background: #966;
+	color: #fff;
+}
+
+.mainfooter {
+	display: flex;
+	justify-content: space-around;
+	width: 1200px;
+	margin: auto;
+}
+.leftfooter p, .rightfooter p {
+	padding: 10px 0 0 0;
+	height: 30px;
+	display: flex;
+	align-items: center;
+}
+
+
+
+.bottomfooter {
+	width: 1200px;
+	margin: auto;
+	padding: 30px;
+	box-sizing: border-box;
+	opacity: 0.6;
+}
+
+.rightfooter img {
+	max-width: 20px;
+	max-height: 20px;
+}
+.mainfooter a {
+	text-decoration: none;
+	color: #fff;
 }
