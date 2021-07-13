@@ -14,9 +14,7 @@ p {
 	justify-content: center;
 	align-content: center;
 }
-.wrapper {
 
-}
 
 
 
@@ -257,7 +255,6 @@ main {
 	flex: 1 1 auto;
 	width: 1200px;
 	margin: auto;
-	/*min-height: 100vh;*/
 	display: flex;
 	justify-content: center;
 	padding: 20px;
@@ -288,14 +285,10 @@ main > .container {
 }
 
 .inimg {
-
-	/*width: 300px;
-	height: 300px;*/
 	display: inline-block; 
     overflow: hidden;
 }
 .inimg img {
-
 	width: 300px;
 	height: 300px;
 	transition: 1s; 
@@ -404,7 +397,7 @@ table th, table td {
 
 
 
-/* order */
+/* order =========================================================*/
 .order {
 	width: 100%;
 	background: #fff;
@@ -417,8 +410,7 @@ table th, table td {
 .empty .nihil {
 	display: block;
 }
-.empty .table,
-.empty #orderdata {
+.empty .table, .empty #orderdata {
 	display: none;
 }
 .rub:after, .sum:after, .allsum:after {
@@ -511,11 +503,6 @@ input, textarea, select {
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
-	/*margin-top: 10px;
-	
-	justify-content: center;
-	width: 1200px;
-	*/
 }
 .small-image {
 	width: 170px;
@@ -544,7 +531,6 @@ input, textarea, select {
 	font: bold 30px Arial;
 	transform: rotate(45deg);
 	cursor: pointer;
-	
 }
 
 .hello {
@@ -609,7 +595,8 @@ iframe {
 	width: 1000px;
 	height: 240px;
 }
-/* footer  ====================================================================================*/
+
+/* footer  ================================================================================*/
 footer {
 	background: #966;
 	color: #fff;
@@ -648,7 +635,7 @@ footer {
 }
 
 
-/* popup */
+/* popup =================================================================*/
 .popup-desk {
 	display: none;
 	position: fixed;
@@ -692,17 +679,17 @@ footer {
 }
 
  .out-table {
-     min-width: 320px;
-     max-width: 100%;
-     padding: 0 15px;
-     box-sizing: border-box;
+    min-width: 320px;
+    max-width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
 }
 
 
 
 
 
-
+/* media 1200 ======================================================================*/
 @media(max-width: 1200px) {
 	.topheader {
 		width: 1000px;
@@ -759,6 +746,7 @@ footer {
 	}
 }
 
+/* media 1000 ======================================================================*/
 @media(max-width: 1000px) {
 	.topheader {
 		width: 768px;
@@ -835,6 +823,7 @@ footer {
 	}
 }
 
+/* media 768 ======================================================================*/
 @media(max-width: 768px) {
 	.topheader {
 		width: 320px;
@@ -884,7 +873,6 @@ footer {
 		align-content: center;
 		margin: 0 auto;
 	}
-
 	#ord {
 		width: 220px;
 		margin: auto;
@@ -898,7 +886,6 @@ footer {
 		width: 320px;
 		flex-direction: column;
 	}
-
 	.bottomfooter {
 		width: 320px;
 	}
@@ -984,7 +971,6 @@ footer {
 	}
 	#select option {
 		width: 300px;
-		
 	}
 	.order {
 		padding: 10px;
@@ -1000,7 +986,6 @@ footer {
 		border: 0;
 		width: 30px;
 	}
-
 	.out-table table thead {
 		display: none;
 	}
