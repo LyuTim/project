@@ -90,62 +90,64 @@
                 <div class="order">
                     <h1>Корзина</h1>
                     <p class="nihil">Ваша корзина пуста.</p>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Наименование</th>
-                                <th scope="col">Количество</th>
-                                <th scope="col">Цена</th>
-                                <th scope="col">Сумма</th>
-                                <th scope="col">Удалить</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row" data-tovar="5711">1</th>
-                                <td>Товар 1</td>
-                                <td class="num">
-                                    <input type="number" value="10" pattern="^[0-9]*$">
-                                </td>
-                                <td class="rub">5</td>
-                                <td class="sum">50</td>
-                                <td class="del">
-                                    <div>+</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row" data-tovar="3432">2</th>
-                                <td>Товар 2</td>
-                                <td class="num">
-                                    <input type="number" value="10" pattern="^[0-9]*$">
-                                </td>
-                                <td class="rub">10</td>
-                                <td class="sum">100</td>
-                                <td class="del">
-                                    <div>+</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row" data-tovar="4846">3</th>
-                                <td>Товар 3</td>
-                                <td class="num">
-                                    <input type="number" value="10" pattern="^[0-9]*$">
-                                </td>
-                                <td class="rub">15</td>
-                                <td class="sum">150</td>
-                                <td class="del">
-                                    <div>+</div>
-                                </td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <th scope="row">Итого</th>
-                                <td colspan="5" class="allsum">300</td>
-                            </tr>
-                        </tfoot>
-                    </table>
+					<div class='out-table'>
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col">Наименование</th>
+									<th scope="col">Количество</th>
+									<th scope="col">Цена</th>
+									<th scope="col">Сумма</th>
+									<th scope="col">Удалить</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row" data-tovar="5711">1</th>
+									<td data-label='Наименование'>Товар 1</td>
+									<td class="num" data-label='Количество'>
+										<input type="number" value="10" pattern="^[0-9]*$">
+									</td>
+									<td class="rub" data-label='Цена'>5</td>
+									<td class="sum" data-label='Сумма'>50</td>
+									<td class="del" data-label='Удалить'>
+										<div>&#10006;</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" data-tovar="3432">2</th>
+									<td data-label='Наименование'>Товар 2</td>
+									<td class="num" data-label='Количество'>
+										<input type="number" value="10" pattern="^[0-9]*$">
+									</td>
+									<td class="rub" data-label='Цена'>10</td>
+									<td class="sum" data-label='Сумма'>100</td>
+									<td class="del" data-label='Удалить'>
+										<div>&#10006;</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" data-tovar="4846">3</th>
+									<td data-label='Наименование'>Товар 3</td>
+									<td class="num" data-label='Количество'>
+										<input type="number" value="10" pattern="^[0-9]*$">
+									</td>
+									<td class="rub" data-label='Цена'>15</td>
+									<td class="sum" data-label='Сумма'>150</td>
+									<td class="del" data-label='Удалить'>
+										<div>&#10006;</div>
+									</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<th scope="row">Итого</th>
+									<td colspan="5" class="allsum">300</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
                     <form id="orderdata">
 					
 						<div class='formdata'>
@@ -159,9 +161,9 @@
 									<input type="radio" name='getting' value='pickup' id='pickup' class='getting'><label for="pickup">Самовывоз</label><br>
 								</div>
 								<div id='select'>
-									<select>
-										<option>г. Москва, ул. Новый Арбат (ст. метро Арбатская)</option>
-										<option>МО, г. Одинцово (ст. МЦД-1 Одинцово)</option>
+									<select name='pickup' size="1">
+										<option value='arb'>г. Москва, ул. Новый Арбат (ст. метро Арбатская)</option>
+										<option value='odi'>МО, г. Одинцово (ст. МЦД-1 Одинцово)</option>
 									</select><br>
 								</div>
 								<div>
