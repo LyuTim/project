@@ -4,7 +4,7 @@ body {
 	margin: 0;
 	font-family: 'Comfortaa', sans-serif;
 	background: #fcc;
-	
+	position: relative;
 }
 p {
 	margin: 0;
@@ -60,12 +60,16 @@ header {
     background-color: #fff;
 	min-width: 120px;
 	text-align: center;
+	
+}
+.topheader nav ul li a {
+	line-height: 1.5;
 }
 			
 			/* стилизуем ссылки */
 .links {
 	display:block;
-	padding:0 10px;
+	padding: 15px;
 	color:#000;
 	font-size:20px;
 	line-height: 60px;
@@ -191,6 +195,7 @@ header {
 }
 .bottomheader nav ul li ul li a {
 	color: #fff;
+	line-height: 1.8;
 }	
 .bottomheader nav ul li ul li a:hover {
 	background-color: #966;
@@ -198,7 +203,7 @@ header {
 			/* стилизуем ссылки */
 .bottomheader nav a {
 	display:block;
-	padding:0 10px;
+	padding: 7px;
 	color:#000;
 	font-size:20px;
 	line-height: 60px;
@@ -252,7 +257,7 @@ main {
 	flex: 1 1 auto;
 	width: 1200px;
 	margin: auto;
-	min-height: 100vh;
+	/*min-height: 100vh;*/
 	display: flex;
 	justify-content: center;
 	padding: 20px;
@@ -264,6 +269,14 @@ main > .container {
 	width: 1200px;
 	align-content: flex-start;
 }
+.text-main {
+	padding: 20px;
+	text-align: center;
+}
+.main-gallery {
+	display: flex;
+}
+
 
 .incontent {
 	margin: 50px;
@@ -276,15 +289,13 @@ main > .container {
 
 .inimg {
 
-	/*background-image: url(../images/cake.jpg);*/
-	width: 300px;
-	height: 300px;
+	/*width: 300px;
+	height: 300px;*/
 	display: inline-block; 
     overflow: hidden;
 }
 .inimg img {
 
-	/*background-image: url(../images/cake.jpg);*/
 	width: 300px;
 	height: 300px;
 	transition: 1s; 
@@ -338,6 +349,7 @@ main > .container {
 }
 .toppingname {
 	font-size: xx-large;
+	padding: 20px 0 0 20px;
 }
 .inbasket {
 	width: 230px;
@@ -360,6 +372,7 @@ table {
 	width: 100%;
 	padding: 10px;
 	border-collapse: collapse;
+	table-layout: auto;
 }
 table tbody tr td {
 	align-content: center;
@@ -428,6 +441,7 @@ table th, td {
 	background: red;
 	color: white;
 	cursor: pointer;
+	margin: 0 auto;
 }
 input, textarea, select {
 	padding: 10px;
@@ -435,6 +449,9 @@ input, textarea, select {
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
+}
+#ord {
+	width: 500px;
 }
 #address {
 	box-sizing: border-box;
@@ -463,9 +480,9 @@ input, textarea, select {
 
 /* gallery=========================================================== */
 .product {
-	width: 100%;
+	width: 1200px;
 	background: #fff;
-	padding: 30px;
+	
 	display: flex;
 	flex-direction: column
 	
@@ -473,19 +490,21 @@ input, textarea, select {
 
 .product-gallery {
 	display: flex;
-	justify-content: space-between;
+	width: 1200px;
+	justify-content: center;
 }
 
 .gallery-desk {
 	width: 640px;
 	float: left;
-	padding: 0 20px 0 0;
+	margin: 20px;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 }
-.main-image {
-
-	
+.main-image img{
+	max-height: 600px;
+	max-width: 600px;
 }
 .gallery-desk img {
 	cursor: zoom-in;
@@ -514,7 +533,7 @@ input, textarea, select {
 	
 }
 .description-desk {
-	padding: 20px 0 0 0;
+	margin: 20px;
 	line-height: 1.5;
 }
 .presentation {
@@ -537,20 +556,19 @@ input, textarea, select {
 	background: #fff;
 }
 
-.left {
+.left-hello {
 
 	padding: 30px 15px 30px 30px;
 
 }
-.left img {
+.left-hello img {
 	width: 500px;
 }
 
-.right {
-
+.right-hello {
 	padding: 30px 30px 30px 15px;
 }
-.right img {
+.right-hello img {
 	width: 500px;
 }
 .delivery {
@@ -562,8 +580,18 @@ input, textarea, select {
 .deliverytext {
 	padding: 30px;
 }
+.image img {
+	max-width: 600px;	
+}
+.image {
+	cursor: default;
+	padding: 15px;
+}
 
-
+iframe {
+	width: 1000px;
+	height: 240px;
+}
 /* footer  ====================================================================================*/
 footer {
 	background: #966;
@@ -621,7 +649,6 @@ footer {
 	position: absolute;
 	left: calc(50% - 150px);
 	top: 300px;
-	width: 300px;
 	background: #fff;
 	border-radius: 20px;
 	padding: 30px;
@@ -647,4 +674,140 @@ footer {
 .lightbox img {
 	max-width: 100%;
 
+}
+
+
+@media(max-width: 1200px) {
+	.topheader {
+	width: 1000px;
+	}
+	.slider {
+    width: 1000px;
+    height: 200px;
+	}
+	.slide {
+		width: 1000px;
+		height: 200px;
+	}
+	.slide img {
+		width: 1000px;
+		height: 200px;
+	}
+	.bottomheader {
+		width: 1000px;
+	}
+	main {
+		width: 1000px;
+
+	}
+	main > .container {
+
+		width: 1000px;
+
+	}
+	.product {
+		width: 1000px;
+	}
+	.gallery-desk {
+		width: 530px;
+	}
+	.product-gallery {
+		width: 1000px;
+	}
+	.description-desk {
+		max-width: 400px;
+	}
+	#ord {
+		width: 350px;
+	}
+	.main-image img{
+		max-height: 530px;
+		max-width: 530px;
+	}
+	.image img {
+		max-height: 500px;
+		max-width: 500px;	
+	}
+	.mainfooter {
+		width: 1000px;
+	}
+	.bottomfooter {
+		width: 1000px;
+	}
+}
+
+@media(max-width: 1000px) {
+	.topheader {
+	width: 768px;
+	}
+	.slider {
+    width: 768px;
+    height: 154px;
+	}
+	.slide {
+		width: 768px;
+		height: 154px;
+	}
+	.slide img {
+		width: 768px;
+		height: 154px;
+	}
+	.bottomheader {
+		width: 768px;
+	}
+	main {
+		width: 768px;
+
+	}
+	main > .container {
+
+		width: 768px;
+
+	}
+	.product {
+		width: 768px;
+	}
+	.gallery-desk {
+		width: 350px;
+	}
+	.product-gallery {
+		width: 768px;
+	}
+	.description-desk {
+		max-width: 270px;
+	}
+	#ord {
+		width: 220px;
+	}
+	.main-image img{
+		max-height: 400px;
+		max-width: 400px;
+	}
+	.mainfooter {
+		width: 768px;
+	}
+	.bottomfooter {
+		width: 768px;
+	}
+	.right-hello img {
+		width: 300px;
+	}
+	iframe {
+		width: 768px;
+	}
+	.image img {
+		max-height: 400px;
+		max-width: 400px;
+	}
+	.inimg img {
+		width: 250px;
+		height: 250px;
+	}
+	.intext {
+		max-width: 250px;
+		font-size: x-large;
+	}
+	.intop {
+		padding: 25px 40px;
+	}
 }
