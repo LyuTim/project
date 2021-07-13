@@ -244,39 +244,7 @@ header {
 
 
 
-/*.bottomheader {
-	width: 1200px;
-	margin: 0 auto;
-}
-.buttonContainer {
-	display: flex;
-	justify-content: space-between;
-	flex-grow: 1;
-}
-.buttonContainer > button {
-	flex-grow: 1;
-	background: none;
-	cursor: pointer;
-}
-.cake {
-	border-bottom: none;
-	border-top: none;
-	border-right: 1px solid #ccc;
-	border-left: none;
-}
-.chocolate {
-	border-bottom: none;
-	border-top: none;
-	border-right: none;
-	border-left: 1px solid #ccc;
-}
 
-.cupcake, .macarons {
-	border-bottom: none;
-	border-top: none;
-	border-right: 1px solid #ccc;
-	border-left: 1px solid #ccc;
-}*/
 
 
 /* main ====================================================================================*/
@@ -563,7 +531,37 @@ input, textarea, select {
 	
 }
 
+.hello {
+	display: flex;
+	align-items: center;
+	background: #fff;
+}
 
+.left {
+
+	padding: 30px 15px 30px 30px;
+
+}
+.left img {
+	width: 500px;
+}
+
+.right {
+
+	padding: 30px 30px 30px 15px;
+}
+.right img {
+	width: 500px;
+}
+.delivery {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.deliverytext {
+	padding: 30px;
+}
 
 /* footer  ====================================================================================*/
 footer {
